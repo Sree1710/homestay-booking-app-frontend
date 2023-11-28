@@ -47,6 +47,12 @@ const AdminLogin = () => {
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button onClick={readValue} className="btn btn-primary">Sign In</button>
                         </div>
+                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"></div>
+                    </div>
+                    <div className="row g-3">
+                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <a href="">Not Admin? Go to User Login !!!</a>
+                        </div>
                     </div>
                 </div>
             </div>
