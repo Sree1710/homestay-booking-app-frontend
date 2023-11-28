@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import LogRegNav from './LogRegNav'
+import { useNavigate } from 'react-router-dom'
 
 const AdminLogin = () => {
     const [inputField,setInputField]=useState(
@@ -8,6 +9,7 @@ const AdminLogin = () => {
     )
 
     const apiLink="http://localhost:3001/adlog"
+    const navigate=useNavigate()
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})
@@ -19,7 +21,7 @@ const AdminLogin = () => {
                 if (Response.data.status=="success") {
                     let token=Response.data.token
                     sessionStorage.setItem("adtoken",token)
-                    alert("Logged Successfully !!!")
+                    navigate("/adpack")
                 } else {
                     alert(Response.data.status)
                 }
