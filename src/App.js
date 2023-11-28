@@ -7,6 +7,7 @@ import AdAddPack from './Components/AdAddPack';
 import AdViewPack from './Components/AdViewPack';
 import AdViewBooking from './Components/AdViewBooking';
 import UserViewPack from './Components/UserViewPack';
+import UsBookPack from './Components/UsBookPack';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/adviewp' exact element={<AdViewPack/>}/>
         <Route path='/adviewb' exact element={<AdViewBooking/>}/>
         <Route path='/usviewp' exact element={<UserViewPack/>}/>
+        <Route path='/usbookp/:pid' exact element={<UsBookPack/>}/>
       </Routes>
       </BrowserRouter>
     </div>
