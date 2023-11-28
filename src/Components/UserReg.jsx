@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import LogRegNav from './LogRegNav'
 
 const UserReg = () => {
     const [inputField,setInputField]=useState(
@@ -36,6 +37,7 @@ const UserReg = () => {
 
   return (
     <div>
+        <LogRegNav/>
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -83,7 +85,7 @@ const UserReg = () => {
                     </div>
                     <div className="row g-3">
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <a href="">Already Registered? Login here !!!</a>
+                            <a href="/uslog">Already Registered? Login here !!!</a>
                         </div>
                     </div>
                 </div>
