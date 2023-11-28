@@ -15,7 +15,7 @@ const AdNav = () => {
                                 <a className="nav-link active" aria-current="page" href="/adpack">Add Package</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">View Package</a>
+                                <a className="nav-link" href="/adviewp">View Package</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">View Booking</a>
