@@ -18,7 +18,7 @@ const AdNav = () => {
                                 <a className="nav-link" href="/adviewp">View Package</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">View Booking</a>
+                                <a className="nav-link" href="/adviewb">View Booking</a>
                             </li>
                         </ul>
                     </div>
