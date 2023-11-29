@@ -35,7 +35,6 @@ const AdViewBooking = () => {
                                     return <div className="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title"><h6>Package ID: </h6>{value.pack_id}</h5>
                                                 <p className="card-text"><h6>Package Name:</h6>{value.packName}</p>
                                                 <p className="card-text"><h6>User: </h6>{value.Name}</p>
                                                 <p className="card-text"><h6>Date Of Booking: </h6>{value.packbookDate}</p>
