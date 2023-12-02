@@ -21,7 +21,7 @@ function App() {
         <Route path='/adviewp' exact element={<AdViewPack/>}/>
         <Route path='/adviewb' exact element={<AdViewBooking/>}/>
         <Route path='/usviewp' exact element={<UserViewPack/>}/>
-        <Route path='/usbookp/:pname' exact element={<UsBookPack/>}/>
+        <Route path='/usbookp/:pid' exact element={<UsBookPack/>}/>
       </Routes>
       </BrowserRouter>
     </div>
