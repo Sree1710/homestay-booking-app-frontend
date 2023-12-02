@@ -7,7 +7,7 @@ const UserReg = () => {
         {Name:"",userDOB:"",userAddress:"",userPhNo:"",userEmail:"",username:"",password:"",confirmpass:""}
     )
 
-    const apiLink="http://localhost:3001/userreg"
+    const apiLink="http://15.206.51.93:3001/userreg"
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})

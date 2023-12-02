@@ -7,7 +7,7 @@ const AdViewPack = () => {
         []
     )
 
-    const apiLink = "http://localhost:3001/adviewp"
+    const apiLink = "http://15.206.51.93:3001/adviewp"
 
     const getData = () => {
         let token = { "token": sessionStorage.getItem("adtoken") }

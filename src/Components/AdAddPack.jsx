@@ -7,7 +7,7 @@ const AdAddPack = () => {
         {token:sessionStorage.getItem("adtoken"),packName:"",packDesc:"",packPhoto:"",packPrice:""}
     )
 
-    const apiLink="http://localhost:3001/addpack"
+    const apiLink="http://15.206.51.93:3001/addpack"
 
     const inputHandler=(event)=>{
         setInputField({...inputField,[event.target.name]:event.target.value})

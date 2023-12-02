@@ -7,7 +7,7 @@ const UserViewPack = () => {
         { token: sessionStorage.getItem("ustoken"), packbookDate: "" }
     )
 
-    const apiLink = "http://localhost:3001/usviewp"
+    const apiLink = "http://15.206.51.93:3001/usviewp"
 
     const [outputField, setOutputField] = useState(
         []
@@ -55,7 +55,7 @@ const UserViewPack = () => {
                                                 <h5 className="card-title">{value.packName}</h5>
                                                 <p className="card-text">{value.packDesc}</p>
                                                 <p className="card-text"><h6>{value.packPrice}</h6></p>
-                                                <a href={'/usbookp/'+value._id} class="btn btn-primary">Book Now</a>
+                                                <a href={'/usbookp/'+value.packName} class="btn btn-primary">Book Now</a>
                                             </div>
                                         </div>
                                     </div>

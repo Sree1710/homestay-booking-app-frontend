@@ -1,49 +1,33 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import UsNav from './UsNav'
 
 const UsBookPack = () => {
-    const [inputField,setInputField]=useState(
-        {token:sessionStorage.getItem("ustoken"),packName:"",Name:sessionStorage.getItem("usname"),packbookDate:""}
-    )
-    
-    const [outputField,setOutputField]=useState(
-        {packName:""}
-    )
-
-    const [packData,setPackData]=useState(
-        []
-    )
-    
     const param=useParams()
-    const apiLink="http://localhost:3001/bookp"
-    const apiLink2="http://localhost:3001/userviewp"
+    let pname=param.pname
+
+    const [inputField,setInputField]=useState(
+        {token:sessionStorage.getItem("ustoken"),packName:pname,Name:sessionStorage.getItem("usname"),packbookDate:""}
+    )
+    
+    
+    const apiLink="http://15.206.51.93:3001/bookp"
     const navigate=useNavigate()
 
-    const getData=()=>{
-        let pid=param.pid
-        let data={"_id":pid,"token":sessionStorage.getItem("ustoken")}
-        axios.post(apiLink2,data).then(
-            (Response)=>{
-                setPackData(Response.data[0])
-                console.log(Response.data[0])
-                setOutputField(Response.data[0])
-                console.log(inputField)
-            }
-        )
-    }
+    
 
     const inputHandler=(event)=>{
-        setInputField({...inputField,...outputField,[event.target.name]:event.target.value})
+        setInputField({...inputField,[event.target.name]:event.target.value})
     }
 
     const readValue=()=>{
         axios.post(apiLink,inputField).then(
             (Response)=>{
                 if (Response.data.status=="success") {
+                    console.log(inputField)
                     alert("Booking Successful !!!")
-                    setInputField({pack_id:"",packName:"",Name:"",packbookDate:""})
+                    setInputField({packName:"",Name:"",packbookDate:""})
                     navigate("/usviewp")
                 } else {
                     alert("Something Went Wrong !!!")
@@ -51,8 +35,6 @@ const UsBookPack = () => {
             }
         )
     }
-
-    useEffect(()=>{getData()},[])
   return (
     <div>
         <UsNav/>
@@ -66,7 +48,7 @@ const UsBookPack = () => {
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label htmlFor="" className="form-label">Package Name</label>
-                            <input onChange={inputHandler} type="text" className="form-control" name="packName" value={outputField.packName} />
+                            <input onChange={inputHandler} type="text" className="form-control" name="packName" value={inputField.packName} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label htmlFor="" className="form-label">User</label>

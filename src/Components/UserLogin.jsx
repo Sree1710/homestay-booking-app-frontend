@@ -8,7 +8,7 @@ const UserLogin = () => {
         {username:"",password:""}
     )
 
-    const apiLink="http://localhost:3001/userlog"
+    const apiLink="http://15.206.51.93:3001/userlog"
     const navigate=useNavigate()
 
     const inputHandler=(event)=>{
