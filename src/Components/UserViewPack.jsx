@@ -7,7 +7,7 @@ const UserViewPack = () => {
         { token: sessionStorage.getItem("ustoken"), packbookDate: "" }
     )
 
-    const apiLink = "http://15.206.51.93:3001/usviewp"
+    const apiLink = "http://localhost:3001/usviewp"
 
     const [outputField, setOutputField] = useState(
         []
